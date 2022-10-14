@@ -4,6 +4,7 @@ module.exports = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
+    '@storybook/addon-a11y',
   ],
   framework: '@storybook/react',
   core: {
@@ -12,10 +13,8 @@ module.exports = {
   features: {
     storyStoreV7: true,
   },
-  // Needed when using github pages inside organization
-  // viteFinal: (config, { configType }) => {
-  //   if (configType === 'PRODUCTION') config.base = '/repo-name-inside-org'
-
-  //   return config
-  // },
+  viteFinal: (config, { configType }) => {
+    if (configType === 'PRODUCTION') config.base = '/style-system-storybook'
+    return config
+  },
 }
