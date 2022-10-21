@@ -8,6 +8,8 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    env:
+      REPOSITORY_NAME: ${{ secrets.REPOSITORY_NAME }}
 
     steps:
       - name: Checkout
