@@ -16,7 +16,7 @@ module.exports = {
   },
   staticDirs: ['../public'],
   viteFinal: (config, { configType }) => {
-    if (configType === 'PRODUCTION') config.base = '/style-system-storybook'
+    if (configType === 'PRODUCTION') config.base = '/training-styled-system-storybook'
     return config
   },
 }
