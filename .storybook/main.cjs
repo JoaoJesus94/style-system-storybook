@@ -16,7 +16,8 @@ module.exports = {
   },
   staticDirs: ['../public'],
   viteFinal: (config, { configType }) => {
-    if (configType === 'PRODUCTION') config.base = '/training-styled-system-storybook'
+    // Used for github pages 👇
+    if (configType === 'PRODUCTION') config.base = `/${process.env.REPOSITORY_NAME}`
     return config
   },
 }
